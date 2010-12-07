@@ -1,0 +1,14 @@
+.page
+  %div
+    %h1 Review
+  .field
+    %h2= @item.name
+    %p= @item.description
+  .ratings
+    %ul#characteristics
+      - @item.category.characteristics.each do |characteristic|
+        %li= characteristic.name
+
+  .content
+    .flavor_wheel
+  .actions

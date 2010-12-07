@@ -1,0 +1,213 @@
+html {
+  background-color: #333;
+  font-size: 16px; }
+  html body {
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #444;
+    font-size: 62.5%;
+    line-height: 1em;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    -webkit-user-select: none;
+    font-family: Helvetica;
+    -webkit-perspective: 800;
+    -webkit-transform-style: preserve-3d; }
+    html body > * {
+      -webkit-backface-visibility: hidden;
+      -webkit-box-sizing: border-box;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      -webkit-transform: translate3d(0, 0, 0) rotate(0) scale(1);
+      min-height: 420px !important; }
+    html body.fullscreen > * {
+      min-height: 460px !important; }
+    html body.fullscreen.black-translucent > * {
+      min-height: 480px !important; }
+    html body.landscape > * {
+      min-height: 320px; }
+    html body > .current {
+      display: block !important; }
+    html body a {
+      color: #4aa2cf;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+    html body #canvas {
+      max-width: 48em;
+      margin: 0 auto;
+      padding: 0; }
+      html body #canvas form {
+        margin: 1em;
+        padding: 0;
+        width: 48em-1em;
+        /* base input styling */ }
+        html body #canvas form .textarea,
+        html body #canvas form .actions,
+        html body #canvas form .content,
+        html body #canvas form .field {
+          background: #fff;
+          clear: both;
+          width: 46em;
+          height: 6em;
+          margin: 0;
+          padding: 0;
+          border-top: 0.1em solid #999999;
+          display: inline-block; }
+          html body #canvas form .textarea:after,
+          html body #canvas form .actions:after,
+          html body #canvas form .content:after,
+          html body #canvas form .field:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden; }
+          * html html body #canvas form .textarea, * html
+          html body #canvas form .actions, * html
+          html body #canvas form .content, * html
+          html body #canvas form .field {
+            height: 1px; }
+        html body #canvas form .content {
+          padding: 1em;
+          width: 44em;
+          background-color: #eee; }
+        html body #canvas form input,
+        html body #canvas form select,
+        html body #canvas form label,
+        html body #canvas form textarea {
+          float: left;
+          margin: 0;
+          padding: .5em 2em;
+          border: none;
+          height: 6em;
+          width: 21.4em; }
+          html body #canvas form input:first-line,
+          html body #canvas form select:first-line,
+          html body #canvas form label:first-line,
+          html body #canvas form textarea:first-line {
+            font-size: 1.8em; }
+          html body #canvas form input:focus,
+          html body #canvas form select:focus,
+          html body #canvas form label:focus,
+          html body #canvas form textarea:focus {
+            outline: none;
+            background: #ffdd00; }
+        html body #canvas form label {
+          background-color: #ccc;
+          width: 16em;
+          padding-right: 2.5em;
+          text-align: right;
+          border-right: 0.1em solid #999999; }
+        html body #canvas form label:first-line {
+          font-size: 2em;
+          line-height: 3em; }
+        html body #canvas form .field.textarea {
+          height: 10em; }
+          html body #canvas form .field.textarea label {
+            height: 10em; }
+          html body #canvas form .field.textarea textarea {
+            font-size: 18px;
+            width: 182px;
+            height: 83px;
+            resize: none; }
+        html body #canvas form .actions {
+          text-align: center;
+          background: none;
+          width: 44em;
+          padding: 1em;
+          background-color: #777777;
+          background-image: -moz-linear-gradient(top, #eeeeee, #777777);
+          background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #eeeeee), color-stop(1, #777777));
+          color: #333;
+          -moz-border-radius: 0;
+          -webkit-border-radius: 0;
+          border-radius: 0;
+          -moz-border-radius-topright: 0;
+          -webkit-border-top-right-radius: 0;
+          -border-top-right-radius: 0;
+          -moz-border-radius-bottomleft: 0.6em;
+          -webkit-border-bottom-left-radius: 0.6em;
+          -border-bottom-left-radius: 0.6em;
+          -moz-border-radius-bottomright: 0.6em;
+          -webkit-border-bottom-right-radius: 0.6em;
+          -border-bottom-right-radius: 0.6em; }
+          html body #canvas form .actions input {
+            background: transparent none;
+            margin: 0;
+            padding: 10px;
+            color: #333;
+            display: inline-block;
+            float: none; }
+      html body #canvas .page {
+        margin: 1em 0; }
+        html body #canvas .page div:first-child {
+          -moz-border-radius: 0.6em;
+          -webkit-border-radius: 0.6em;
+          border-radius: 0.6em;
+          -moz-border-radius-bottomleft: 0;
+          -webkit-border-bottom-left-radius: 0;
+          -border-bottom-left-radius: 0;
+          -moz-border-radius-bottomright: 0;
+          -webkit-border-bottom-right-radius: 0;
+          -border-bottom-right-radius: 0; }
+        html body #canvas .page div {
+          background-color: #fff;
+          clear: both;
+          width: 44em;
+          min-height: 6em;
+          padding: 1em; }
+          html body #canvas .page div div {
+            width: auto; }
+          html body #canvas .page div h1 {
+            text-align: center;
+            font-size: 2.4em;
+            margin: .5em 0 0;
+            font-weight: bold; }
+          html body #canvas .page div h2 {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: .5em; }
+          html body #canvas .page div p {
+            font-size: 1.6em; }
+          html body #canvas .page div ul.tools {
+            width: auto;
+            text-align: center;
+            padding: .5em 0 1em;
+            border-bottom: .2em dotted #ddd; }
+            html body #canvas .page div ul.tools li {
+              display: inline-block; }
+        html body #canvas .page .content .flavor_wheel {
+          width: 40em;
+          margin: 0 auto; }
+        html body #canvas .page .actions {
+          text-align: center;
+          background: none;
+          width: 44em;
+          padding: 1em;
+          background-color: #777777;
+          background-image: -moz-linear-gradient(top, #eeeeee, #777777);
+          background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #eeeeee), color-stop(1, #777777));
+          color: #333;
+          -moz-border-radius: 0;
+          -webkit-border-radius: 0;
+          border-radius: 0;
+          -moz-border-radius-topright: 0;
+          -webkit-border-top-right-radius: 0;
+          -border-top-right-radius: 0;
+          -moz-border-radius-bottomleft: 0.6em;
+          -webkit-border-bottom-left-radius: 0.6em;
+          -border-bottom-left-radius: 0.6em;
+          -moz-border-radius-bottomright: 0.6em;
+          -webkit-border-bottom-right-radius: 0.6em;
+          -border-bottom-right-radius: 0.6em; }
+          html body #canvas .page .actions input {
+            background: transparent none;
+            margin: 0;
+            padding: 10px;
+            color: #333;
+            display: inline-block;
+            float: none; }

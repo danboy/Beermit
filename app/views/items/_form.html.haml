@@ -1,0 +1,14 @@
+= form_for(@item) do |f|
+  = render :partial => "shared/errors", :locals => { :errors => @item.errors }
+  .field
+    = f.label :category_id, "Category"
+    = select  :item, :category_id, @categories.collect{|u| [u.name, u.id]}
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field.textarea
+    = f.label :description
+    = f.text_area :description
+  .content
+  .actions
+    = f.submit

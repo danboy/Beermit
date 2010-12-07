@@ -1,0 +1,13 @@
+.page
+  %div
+    %h1 Listing categories
+  - @categories.each do |category|
+    .category
+      %h2= category.name
+      %p= category.description
+      %ul.tools
+        %li= link_to 'Show', category
+        %li= link_to 'Edit', edit_category_path(category)
+        %li= link_to 'Destroy', category, :method => :delete
+  .actions
+    = link_to 'New category', new_category_path

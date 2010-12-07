@@ -1,0 +1,215 @@
+@import "css3";
+
+@mixin clearfix {
+  display: inline-block;
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  * html & { height: 1px }
+}
+html { 
+  background-color: #333;font-size:16px;
+  $width: 48em;
+  $border-color: #999;
+  $margin: 1em;
+  $highlight: #fd0;
+  body { 
+    margin: 0;
+    padding: 0;
+    background-color: #333; 
+    font-family: Helvetica, Arial, sans-serif; 
+    color: #444; 
+    font-size: 62.5%; 
+    line-height: 1em; 
+    text-rendering: optimizeLegibility; 
+    -webkit-text-size-adjust: none; 
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    -webkit-user-select: none;
+    font-family: Helvetica;
+    -webkit-perspective: 800;
+    -webkit-transform-style: preserve-3d;
+    & > * {
+        -webkit-backface-visibility: hidden;
+        -webkit-box-sizing: border-box;
+    //    display: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        -webkit-transform: translate3d(0,0,0) rotate(0) scale(1);
+        min-height: 420px !important;
+    }
+    &.fullscreen > * {
+        min-height: 460px !important;
+    }
+    &.fullscreen.black-translucent > * {
+        min-height: 480px !important;
+    }
+    &.landscape > * {
+        min-height: 320px;
+    }
+    & > .current {
+        display: block !important;
+    }
+
+    a {
+      color: #4aa2cf;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+    #canvas { 
+      max-width: #{$width};
+      margin: 0 auto;
+      padding: 0;
+      form {
+        margin: #{$margin};
+        padding: 0;
+        width: #{$width}-#{$margin};
+        .textarea,
+        .actions,
+        .content,
+        .field {
+          background: #fff;
+          clear: both;
+          width: 46em;
+          height: 6em;
+          margin: 0;
+          padding: 0;
+          border-top: .1em solid #{$border-color};
+          @include clearfix;
+        }
+        .content{
+          padding: #{$margin};
+          width: 44em;
+          background-color: #eee;
+        }
+
+        /* base input styling */
+        input,
+        select,
+        label,
+        textarea{
+          float:left;
+          margin: 0;
+          padding: .5em 2em;
+          border: none;
+          height: 6em;
+          width: 21.4em;
+          &:first-line{
+            font-size: 1.8em;
+          }
+          &:focus{
+            outline:none;
+            background: #{$highlight};
+          }
+        }
+        
+        label{
+          background-color: #ccc;
+          width: 16em;
+          padding-right: 2.5em;
+          text-align: right;
+          border-right: .1em solid #{$border-color};
+        }
+        label:first-line{
+          font-size: 2em;
+          line-height: 3em;
+        }
+        .field.textarea{
+
+          height: 10em;
+          label{
+            height: 10em;
+          }
+          textarea{
+            font-size: 18px;
+            width: 182px;
+            height: 83px;
+            resize: none;
+          }
+
+        }
+        .actions{
+          text-align: center;
+          background:none;
+          width: 44em;
+          padding: #{$margin};
+          @include linear-gradient(#EEE, #777);
+          color: #333;
+          @include border-radius(0, 0, .6em, .6em);
+          input{
+            background:transparent none;
+            margin:0;
+            padding: 10px;
+            color: #333;
+            display: inline-block;
+            float: none;
+          }
+        }
+      }
+      .page{
+        margin: 1em 0;
+        div:first-child{
+            @include border-radius(.6em, "", 0, 0);
+        }
+        div{
+          background-color: #fff;
+          clear: both;
+          width: 44em;
+          min-height: 6em;
+          padding: #{$margin};
+          div{ width:auto;}
+          h1{
+            text-align: center;
+            font-size: 2.4em;
+            margin: .5em 0 0;
+            font-weight:bold;
+          }
+          h2{
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: .5em;
+          }
+          p{
+            font-size: 1.6em;
+          }
+          ul.tools{
+            width: auto;
+            text-align: center;
+            padding: .5em 0 1em;
+            border-bottom: .2em dotted #ddd;
+            li{
+              display: inline-block;
+            }
+          }
+        }
+        .content{
+          .flavor_wheel{
+            width: 40em;
+            margin: 0 auto;
+          }
+        }
+        .actions{
+          text-align: center;
+          background:none;
+          width: 44em;
+          padding: #{$margin};
+          @include linear-gradient(#EEE, #777);
+          color: #333;
+          @include border-radius(0, 0, .6em, .6em);
+          input{
+            background:transparent none;
+            margin:0;
+            padding: 10px;
+            color: #333;
+            display: inline-block;
+            float: none;
+          }
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,18 @@
+.page
+  %div
+    %h2 Name:
+    %p= @category.name
+    %span#notice= notice
+  %div
+    %h2 Description:
+    %p= @category.description
+  %div
+    %h2 Characteristics
+    %ul
+      - @category.characteristics.each do |characteristic|
+        %li= characteristic.name
+      %li= link_to "add a characteristic", :controller => :characteristics, :action => :new , :id => @category.id
+  .actions
+    = link_to 'Edit', edit_category_path(@category)
+    |
+    \#{link_to 'Back', category_path}

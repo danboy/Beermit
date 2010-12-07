@@ -1,0 +1,15 @@
+= form_for(@characteristic) do |f|
+  - if @characteristic.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@characteristic.errors.count, "error")
+        prohibited this characteristic from being saved:
+      %ul
+        - @characteristic.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :name
+    = f.text_field :name
+    = hidden_field_tag :category_id, @characteristic.categories.first.id
+  .actions
+    = f.submit

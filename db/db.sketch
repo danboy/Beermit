@@ -1,0 +1,20 @@
+Item
+  name:string
+  description:text
+  has_and_belongs_to :characteristics
+Characteristic
+  name:string
+  has_and_belongs_to :item
+characteristics_items
+ item_id:integer
+ characteristic_id:integer
+Review
+  user_id:integer
+  editorial:text
+  has_many :ratings
+  belongs_to :item
+Rating
+  characteristic_id:integer
+  value:integer
+  note:text
+
